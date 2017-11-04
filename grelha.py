@@ -6,12 +6,6 @@ def print_char(c):
     sys.stdout.write(c)
     sys.stdout.flush()
 
-#zona configuravel
-
-linhas = 10
-colunas = 10
-
-
 # zona nao configuravel
 
 def mostrarecra():
@@ -64,20 +58,31 @@ def moverrobot ( paraonde ):
 
     if (paraonde == "r") and colunarobot != colunas and ((linharobot, colunarobot+1) not in conjuntodepedras):
         colunarobot = colunarobot + 1
-    
+
     if ( (linharobot,colunarobot) in conjuntodepontos and conjuntodepontos[(linharobot,colunarobot)] == 1) :
         conjuntodepontos[(linharobot,colunarobot)] = 0
         pontos = pontos+1
 
-linharobot = int (raw_input (" linha do robot " ))
-colunarobot = int(raw_input ("coluna do robot " ))
+
+#zona configuravel
+
+file = open("informacao_inicial.txt", "r")
+content = file.read()
+tokens = content.split()
+
+#Extrat map size
+linhas = int( tokens[0] )
+colunas = int( tokens [1])
+
+linharobot = int (tokens[2])
+colunarobot = int(tokens[3])
 
 
-linhafinal = int (raw_input(" linha final " ))
-colunafinal = int (raw_input("coluna final "))
+linhafinal = int (tokens[4])
+colunafinal = int (tokens[5])
 
-npedras = int (raw_input(" quantas pedras " ))
-npontos = int (raw_input(" quantos pontos " ))
+npedras = int (tokens [6])
+npontos = int (tokens [7])
 
 conjuntodepedras = {}
 for l in range (1, npedras + 1):
@@ -107,4 +112,4 @@ while True :
 
         break
 
-print "Congratulations!!! Pontos = ",pontos 
+print "Congratulations!!! Pontos = ",pontos

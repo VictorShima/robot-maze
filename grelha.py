@@ -47,16 +47,16 @@ def moverrobot ( paraonde ):
     global pontos
     print "eu vou para " + paraonde
 
-    if (paraonde == "u") and (linharobot != 1) and ((linharobot-1, colunarobot) not in conjuntodepedras):
+    if (paraonde == "w") and (linharobot != 1) and ((linharobot-1, colunarobot) not in conjuntodepedras):
         linharobot = linharobot - 1
 
-    if (paraonde == "l") and (colunarobot != 1) and ((linharobot, colunarobot -1) not in conjuntodepedras):
+    if (paraonde == "a") and (colunarobot != 1) and ((linharobot, colunarobot -1) not in conjuntodepedras):
         colunarobot = colunarobot - 1
 
-    if (paraonde == "d") and (linharobot != linhas) and ((linharobot+1, colunarobot) not in conjuntodepedras):
+    if (paraonde == "s") and (linharobot != linhas) and ((linharobot+1, colunarobot) not in conjuntodepedras):
         linharobot = linharobot + 1
 
-    if (paraonde == "r") and colunarobot != colunas and ((linharobot, colunarobot+1) not in conjuntodepedras):
+    if (paraonde == "d") and colunarobot != colunas and ((linharobot, colunarobot+1) not in conjuntodepedras):
         colunarobot = colunarobot + 1
 
     if ( (linharobot,colunarobot) in conjuntodepontos and conjuntodepontos[(linharobot,colunarobot)] == 1) :

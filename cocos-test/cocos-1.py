@@ -182,3 +182,5 @@ main_scene = cocos.scene.Scene( KeyDisplay(), MouseDisplay(), MovingSprite() )
 cocos.director.director.run( main_scene )
 
 
+
+

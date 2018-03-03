@@ -8,7 +8,11 @@ import cocos
 
 
 
-
+## Unidade
+#
+# Unidades são objectos que estão no mapa. Todas as unidades têm um
+# tipo e a posição onde elas estão.
+##
 class Unidade () :
 
 

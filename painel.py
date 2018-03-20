@@ -15,7 +15,7 @@ class Painel ( cocos.layer.Layer ) :
 
 
     def __init__ ( self ) :
-        super( Painel, self ).__init__() # Dessenhar a layer
+        super( Painel, self ).__init__() # Desenhar a layer
         self.pontuacao = cocos.text.Label(
             'Pontos: 0',
             font_size=14,
